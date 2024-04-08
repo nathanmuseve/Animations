@@ -1,33 +1,76 @@
+body {
+    box-sizing: border-box;
+    background-color: rgb(73, 64, 64);
+}
 .container {
     display: flex;
-    gap: 3rem;
-    border: 1px solid rgb(68, 68, 177);
+    gap: 10px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin: 6px;
+    width: 100%;
+    height: auto;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
 }
+@media and (min-width: 768px) and (max-width: 1320px) {
+    .container {
+        flex-wrap: wrap;
+    }
+} 
 @keyframes animate {
-    0% {background-color: blue;
-        transition: all;
-        transition-duration: 6s;
+    0% {
+        background-color: rgb(24, 24, 27);
+        transform: rotate(0deg);
+    }
+    25% {
+        background-color: blue;
+        transform: rotate(30deg), skew(30);
+    }
+    50% {
+        background-color: red;
+        transform: rotate(90deg);
+    }
+    75% {
+        background-color: yellowgreen;
+        transform: rotate(180deg);
     }
     100% {background-color: green;
-        transform: rotateX('60angle');
-        transition: 8s;
+        transform: rotate(360deg);
     }
 }
 .Animations {
-    border: 2px solid rgb(111, 111, 187);
-    grid: 1rem;
-    margin: 1rem;
-    background-color: brown;
+    flex-wrap: wrap;
+    border: 4px hidden rgb(66, 66, 92);
+    margin: 5px;
+    background-color: rgb(114, 85, 85);
     color: white;
+    box-shadow: 2px 4px 6px white;
     overflow-y: auto;
     animation-name: animate;
-    animation-duration: 2s;
+    animation-duration: 8s;
+    animation-play-state: running;
+    animation-iteration-count: forwards;
+    animation-direction: alternate;
+    width: 75%;
+    height: auto;
+    transition: width 5s linear;
+}
+.infinite {
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    transform: skewx( 15deg);
 }
 .Animations>p {
-    margin: 4px;
+    margin:6px;
 }
-.Animations {
-    transition-property: all;
-    transition-duration: 5s;
-    
+.Animations:hover {
+    background-color: rgb(0, 0, 255);
+    color: white;
 }
+@media and (min-width: 768px) and (max-width: 1320px) {
+  .Animations {
+     flex-wrap: wrap;
+    }
+} 
