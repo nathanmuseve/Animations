@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    gap: 3rem;
+    border: 1px solid rgb(68, 68, 177);
+}
+@keyframes animate {
+    0% {background-color: blue;
+        transition: all;
+        transition-duration: 6s;
+    }
+    100% {background-color: green;
+        transform: rotateX('60angle');
+        transition: 8s;
+    }
+}
+.Animations {
+    border: 2px solid rgb(111, 111, 187);
+    grid: 1rem;
+    margin: 1rem;
+    background-color: brown;
+    color: white;
+    overflow-y: auto;
+    animation-name: animate;
+    animation-duration: 2s;
+}
+.Animations>p {
+    margin: 4px;
+}
+.Animations {
+    transition-property: all;
+    transition-duration: 5s;
+    
+}
